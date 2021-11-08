@@ -5,17 +5,10 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "dist/",
   },
   module: {
     rules: [
-      {
-        test: /\.scss$/i,
-        use: ["style-loader", "sass-loader"],
-      },
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",

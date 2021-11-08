@@ -20,6 +20,7 @@
   "homepage": "https://github.com/cos1715/Webpack#readme",
   "devDependencies": {
     "css-loader": "^6.5.1",
+    "file-loader": "^6.2.0",
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.62.1",
