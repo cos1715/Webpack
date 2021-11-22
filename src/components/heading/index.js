@@ -3,8 +3,8 @@ import "./styles.scss";
 export class Heading {
   constructor(text = "Hello") {
     this.text = text;
-    this.body = document.getElementById("root");
     this.h1 = document.createElement("h1");
+    this.body = document.getElementById("root");
   }
   render() {
     this.h1.innerText = this.text;
