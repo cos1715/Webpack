@@ -30,6 +30,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/components/image/index.js":
+/*!***************************************!*\
+  !*** ./src/components/image/index.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Image\": () => (/* binding */ Image)\n/* harmony export */ });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n// import ME from \"../../assets/tez.png\";\nvar Image = /*#__PURE__*/function () {\n  function Image(src) {\n    _classCallCheck(this, Image);\n\n    this.src = src;\n    this.body = document.getElementById(\"root\");\n    this.img = document.createElement(\"img\");\n  }\n\n  _createClass(Image, [{\n    key: \"render\",\n    value: function render() {\n      this.img.setAttribute(\"alt\", \"OMG\");\n      this.img.setAttribute(\"width\", \"300\");\n      this.img.setAttribute(\"src\", this.src);\n\n      if (this.body) {\n        this.body.appendChild(this.button);\n      }\n    }\n  }]);\n\n  return Image;\n}();\n\n//# sourceURL=webpack://Webpack/./src/components/image/index.js?");
+
+/***/ }),
+
 /***/ "./src/hello-world.js":
 /*!****************************!*\
   !*** ./src/hello-world.js ***!
@@ -40,23 +50,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/image.js":
-/*!**********************!*\
-  !*** ./src/image.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addImage\": () => (/* binding */ addImage)\n/* harmony export */ });\nvar addImage = function addImage(img) {\n  var node = document.createElement(\"img\");\n  node.setAttribute(\"alt\", \"OMG\");\n  node.setAttribute(\"width\", \"300\");\n  node.setAttribute(\"src\", img);\n  var body = document.getElementById(\"root\");\n  body.appendChild(node);\n};\n\n//# sourceURL=webpack://Webpack/./src/image.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hello_world__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hello-world */ \"./src/hello-world.js\");\n/* harmony import */ var _image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./image */ \"./src/image.js\");\n/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./button */ \"./src/button.js\");\n/* harmony import */ var _components_heading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/heading */ \"./src/components/heading/index.js\");\n/* harmony import */ var _assets_tez_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/tez.png */ \"./src/assets/tez.png\");\n/* harmony import */ var _assets_tez2_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/tez2.png */ \"./src/assets/tez2.png\");\n\n\n\n\n\n\nvar button = new _button__WEBPACK_IMPORTED_MODULE_2__.Button();\nvar buttonBye = new _button__WEBPACK_IMPORTED_MODULE_2__.Button(\"Bye\");\nvar h1 = new _components_heading__WEBPACK_IMPORTED_MODULE_3__.Heading();\n(0,_hello_world__WEBPACK_IMPORTED_MODULE_0__.hello)();\n(0,_image__WEBPACK_IMPORTED_MODULE_1__.addImage)(_assets_tez_png__WEBPACK_IMPORTED_MODULE_4__);\n(0,_image__WEBPACK_IMPORTED_MODULE_1__.addImage)(_assets_tez2_png__WEBPACK_IMPORTED_MODULE_5__);\nh1.render();\nbutton.addEvent();\nbutton.render();\nbuttonBye.addEvent();\nbuttonBye.render();\nconsole.log(\"development\");\n\n//# sourceURL=webpack://Webpack/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hello_world__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hello-world */ \"./src/hello-world.js\");\n/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./button */ \"./src/button.js\");\n/* harmony import */ var _components_heading__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/heading */ \"./src/components/heading/index.js\");\n/* harmony import */ var _components_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/image */ \"./src/components/image/index.js\");\n/* harmony import */ var _assets_tez2_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/tez2.png */ \"./src/assets/tez2.png\");\n\n\n\n\n\nvar button = new _button__WEBPACK_IMPORTED_MODULE_1__.Button();\nvar buttonBye = new _button__WEBPACK_IMPORTED_MODULE_1__.Button(\"Bye\");\nvar h1 = new _components_heading__WEBPACK_IMPORTED_MODULE_2__.Heading(); // const img1 = new Image();\n\nvar img2 = new _components_image__WEBPACK_IMPORTED_MODULE_3__.Image(_assets_tez2_png__WEBPACK_IMPORTED_MODULE_4__);\n(0,_hello_world__WEBPACK_IMPORTED_MODULE_0__.hello)(); // img1.render();\n\nimg2.render();\nh1.render();\nbutton.addEvent();\nbutton.render();\nbuttonBye.addEvent();\nbuttonBye.render();\nconsole.log(\"development\");\n\n//# sourceURL=webpack://Webpack/./src/index.js?");
 
 /***/ }),
 
@@ -77,16 +77,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://Webpack/./src/styles/style.scss?");
-
-/***/ }),
-
-/***/ "./src/assets/tez.png":
-/*!****************************!*\
-  !*** ./src/assets/tez.png ***!
-  \****************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"5de300f4315a1e5170d4.png\";\n\n//# sourceURL=webpack://Webpack/./src/assets/tez.png?");
 
 /***/ }),
 

@@ -13,7 +13,7 @@ module.exports = merge(config, {
     compress: true,
     port: 9000,
   },
-  // watch: true,
+  watch: true,
 
   plugins: [
     new MiniCssExtractPlugin({

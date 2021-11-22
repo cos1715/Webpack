@@ -7,9 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-prod": "webpack --config webpack/webpack.prod.js",
     "build-dev": "webpack --config webpack/webpack.dev.js",
-    "start": "webpack serve --open",
     "watch": "webpack --watch --config webpack/webpack.dev.js",
-    "serve": "webpack serve --config webpack/webpack.dev.js"
+    "start": "webpack serve --config webpack/webpack.dev.js --open"
   },
   "repository": {
     "type": "git",
