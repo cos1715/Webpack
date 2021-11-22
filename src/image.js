@@ -5,7 +5,7 @@ export const addImage = () => {
   node.setAttribute("alt", "OMG");
   node.setAttribute("width", "300");
   node.setAttribute("src", ME);
-  const body = document.getElementById("root");
+  const body = document.getElementsByTagName("body")[0];
 
   body.appendChild(node);
 };

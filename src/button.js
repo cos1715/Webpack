@@ -5,7 +5,7 @@ export class Button {
 
   constructor(text = "Hello") {
     this.text = text;
-    this.body = document.getElementById("root");
+    this.body = document.getElementsByTagName("body")[0];
     this.button = document.createElement("button");
   }
   render() {

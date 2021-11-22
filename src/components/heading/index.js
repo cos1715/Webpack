@@ -4,7 +4,7 @@ export class Heading {
   constructor(text = "Hello") {
     this.text = text;
     this.h1 = document.createElement("h1");
-    this.body = document.getElementById("root");
+    this.body = document.getElementsByTagName("body")[0];
   }
   render() {
     this.h1.innerText = this.text;
