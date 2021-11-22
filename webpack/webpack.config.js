@@ -11,6 +11,7 @@ module.exports = {
     publicPath: "",
     clean: true,
   },
+  mode: "development",
   module: {
     rules: [
       {
