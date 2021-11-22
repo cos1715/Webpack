@@ -14,3 +14,5 @@ button.addEvent();
 button.render();
 buttonBye.addEvent();
 buttonBye.render();
+
+console.log(process.env.NODE_ENV);
