@@ -26,6 +26,10 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
+        test: /\.hbs$/i,
+        use: ["handlebars-loader"],
+      },
+      {
         test: /\.js$/i,
         exclude: /node_modules/,
         use: {
@@ -44,6 +48,9 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: "Output Management",
+      description: "Learning webpack Plugins",
+      inject: "body",
+      template: path.resolve(__dirname, "../src/index.hbs"),
     }),
   ],
   optimization: {
