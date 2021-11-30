@@ -2,6 +2,7 @@ import { hello } from "./hello-world";
 import { Button } from "./button";
 import { Heading } from "./components/heading";
 import { Image } from "./components/image";
+import React from 'react';
 
 const button = new Button();
 const buttonBye = new Button("Bye");

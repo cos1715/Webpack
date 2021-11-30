@@ -12,11 +12,6 @@ module.exports = {
     publicPath: "",
     clean: true,
   },
-  optimization: {
-    splitChunks: {
-      chunks: "all",
-    },
-  },
   module: {
     rules: [
       {
@@ -62,7 +57,7 @@ module.exports = {
       title: "Page 2",
       description: "Learning webpack Splitting",
       inject: "body",
-      chunks: ["test", "vendors-node_modules_lodash_lodash_js"],
+      chunks: ["test",'vendors-node_modules_lodash_lodash_js'],
       template: path.resolve(__dirname, "../src/index.hbs"),
     }),
   ],

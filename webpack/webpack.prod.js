@@ -9,7 +9,7 @@ module.exports = merge(config, {
   mode: "production",
 
   output: {
-    filename: "[name].[contenthash].js",
+    filename: "[name].js",
   },
 
   plugins: [
@@ -21,5 +21,10 @@ module.exports = merge(config, {
   optimization: {
     minimize: true,
     minimizer: [new TerserPlugin()],
+    splitChunks: {
+      chunks: "all",
+      minSize: 10000,
+      automaticNameDelimiter: "_",
+    }
   },
 });
