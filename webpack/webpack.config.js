@@ -3,12 +3,19 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    index: "./src/index.js",
+    test: "./src/index2.js",
+  },
   output: {
-    filename: "main.js",
     path: path.resolve(__dirname, "../dist"),
     publicPath: "",
     clean: true,
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
   },
   module: {
     rules: [
@@ -43,9 +50,19 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      filename: "index.html",
       title: "Output Management",
       description: "Learning webpack Plugins",
       inject: "body",
+      chunks: ["index", "vendors-node_modules_lodash_lodash_js"],
+      template: path.resolve(__dirname, "../src/index.hbs"),
+    }),
+    new HtmlWebpackPlugin({
+      filename: "index2.html",
+      title: "Page 2",
+      description: "Learning webpack Splitting",
+      inject: "body",
+      chunks: ["test", "vendors-node_modules_lodash_lodash_js"],
       template: path.resolve(__dirname, "../src/index.hbs"),
     }),
   ],

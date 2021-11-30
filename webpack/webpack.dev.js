@@ -6,6 +6,11 @@ const config = require("./webpack.config");
 
 module.exports = merge(config, {
   mode: "development",
+
+  output: {
+    filename: "[name].js",
+  },
+
   devServer: {
     static: {
       directory: path.resolve(__dirname, "../dist"),
@@ -13,11 +18,12 @@ module.exports = merge(config, {
     compress: true,
     port: 9000,
   },
+  
   watch: true,
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "styles.css",
+      filename: "[name].css",
     }),
   ],
 });

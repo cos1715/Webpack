@@ -9,12 +9,12 @@ module.exports = merge(config, {
   mode: "production",
 
   output: {
-    filename: "main.[contenthash].js",
+    filename: "[name].[contenthash].js",
   },
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "styles.[contenthash].css",
+      filename: "[name].[contenthash].css",
     }),
   ],
 

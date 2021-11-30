@@ -1,3 +1,4 @@
+import _ from "lodash";
 import "./styles.scss";
 
 export class Heading {
@@ -6,8 +7,8 @@ export class Heading {
     this.h1 = document.createElement("h1");
     this.body = document.getElementById("root");
   }
-  render() {
-    this.h1.innerText = this.text;
+  render(pageName = "") {
+    this.h1.innerText = `${this.text} '${_.upperFirst(pageName)}' page`;
     this.h1.setAttribute("class", "text-h1");
 
     if (this.body) {
