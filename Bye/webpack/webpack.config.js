@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { ModuleFederationPlugin } = require("webpack").container;
 
 module.exports = {
   entry: {
@@ -38,6 +39,12 @@ module.exports = {
     ],
   },
   plugins: [
+    new ModuleFederationPlugin({
+      name: "ByeApp",
+      remotes: {
+        HelloApp: "HelloApp@http://localhost:9000/remoteEntry.js",
+      },
+    }),
     new HtmlWebpackPlugin({
       filename: "index.html",
       title: "Page 2",

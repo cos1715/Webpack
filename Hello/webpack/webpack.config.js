@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { ModuleFederationPlugin } = require("webpack").container;
 
 module.exports = {
   entry: {
@@ -8,7 +9,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "../dist"),
-    publicPath: "",
+    publicPath: "http://localhost:9000/",
     clean: true,
   },
   module: {
@@ -39,6 +40,13 @@ module.exports = {
     ],
   },
   plugins: [
+    new ModuleFederationPlugin({
+      name: "HelloApp",
+      filename: "remoteEntry.js",
+      exposes:{
+        './Button':'../src/button/js'
+      }
+    }),
     new HtmlWebpackPlugin({
       filename: "index.html",
       title: "Output Management",
