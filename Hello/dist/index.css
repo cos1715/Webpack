@@ -1,0 +1,41 @@
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/style.scss ***!
+  \****************************************************************************************************************/
+.hello {
+  display: flex;
+  margin: 20px 0;
+  border: 1px solid aquamarine;
+  border-radius: 4px;
+  background-color: aquamarine;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  transition: all 0.3s; }
+  .hello:hover {
+    background-color: white;
+    color: aquamarine; }
+
+.text {
+  font-family: cursive;
+  font-size: 16px;
+  line-height: 24px;
+  color: aquamarine; }
+
+/*!*****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/heading/styles.scss ***!
+  \*****************************************************************************************************************************/
+.text-h1 {
+  font-family: cursive;
+  color: cadetblue; }
+
+/*!***************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/image/styles.scss ***!
+  \***************************************************************************************************************************/
+.img {
+  max-width: 300px;
+  max-height: 300px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 4px;
+  margin: 8px; }
+
