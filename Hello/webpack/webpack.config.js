@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "../dist"),
-    publicPath: "/static/",
+    publicPath: "",
     clean: true,
   },
   module: {
@@ -16,6 +16,10 @@ module.exports = {
       {
         test: /\.scss$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
       {
         test: /\.hbs$/i,
