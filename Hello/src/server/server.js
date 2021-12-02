@@ -12,13 +12,6 @@ app.get("/", (req, res) => {
   res.send(content);
 });
 
-app.get("/2", (req, res) => {
-  const pathToFile = path.resolve(__dirname, "../../dist/index2.html");
-  const content = fs.readFileSync(pathToFile, "utf-8");
-
-  res.send(content);
-});
-
 app.use("/static", express.static(path.resolve(__dirname, "../../dist")));
 
 app.listen(port, () => {
