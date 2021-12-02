@@ -1,4 +1,4 @@
-import ME from "../../assets/tez.png";
+import ME from "../../assets/tez2.png";
 import "./styles.scss";
 
 export class Image {
