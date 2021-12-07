@@ -6,18 +6,18 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-var HelloApp;
+var ByeApp;
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "webpack/container/entry/HelloApp":
+/***/ "webpack/container/entry/ByeApp":
 /*!***********************!*\
   !*** container entry ***!
   \***********************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("var moduleMap = {\n\t\"./Button\": () => {\n\t\treturn __webpack_require__.e(\"src_button_js\").then(() => (() => ((__webpack_require__(/*! ./src/button.js */ \"./src/button.js\")))));\n\t},\n\t\"./HelloPage\": () => {\n\t\treturn Promise.all([__webpack_require__.e(\"vendors-node_modules_lodash_lodash_js\"), __webpack_require__.e(\"src_components_page_index_js\")]).then(() => (() => ((__webpack_require__(/*! ./src/components/page/index.js */ \"./src/components/page/index.js\")))));\n\t}\n};\nvar get = (module, getScope) => {\n\t__webpack_require__.R = getScope;\n\tgetScope = (\n\t\t__webpack_require__.o(moduleMap, module)\n\t\t\t? moduleMap[module]()\n\t\t\t: Promise.resolve().then(() => {\n\t\t\t\tthrow new Error('Module \"' + module + '\" does not exist in container.');\n\t\t\t})\n\t);\n\t__webpack_require__.R = undefined;\n\treturn getScope;\n};\nvar init = (shareScope, initScope) => {\n\tif (!__webpack_require__.S) return;\n\tvar oldScope = __webpack_require__.S[\"default\"];\n\tvar name = \"default\"\n\tif(oldScope && oldScope !== shareScope) throw new Error(\"Container initialization failed as it has already been initialized with a different share scope\");\n\t__webpack_require__.S[name] = shareScope;\n\treturn __webpack_require__.I(name, initScope);\n};\n\n// This exports getters to disallow modifications\n__webpack_require__.d(exports, {\n\tget: () => (get),\n\tinit: () => (init)\n});\n\n//# sourceURL=webpack://Webpack/container_entry?");
+eval("var moduleMap = {\n\t\"./ByePage\": () => {\n\t\treturn Promise.all([__webpack_require__.e(\"vendors-node_modules_lodash_lodash_js\"), __webpack_require__.e(\"src_components_page_index_js\")]).then(() => (() => ((__webpack_require__(/*! ./src/components/page/index.js */ \"./src/components/page/index.js\")))));\n\t}\n};\nvar get = (module, getScope) => {\n\t__webpack_require__.R = getScope;\n\tgetScope = (\n\t\t__webpack_require__.o(moduleMap, module)\n\t\t\t? moduleMap[module]()\n\t\t\t: Promise.resolve().then(() => {\n\t\t\t\tthrow new Error('Module \"' + module + '\" does not exist in container.');\n\t\t\t})\n\t);\n\t__webpack_require__.R = undefined;\n\treturn getScope;\n};\nvar init = (shareScope, initScope) => {\n\tif (!__webpack_require__.S) return;\n\tvar oldScope = __webpack_require__.S[\"default\"];\n\tvar name = \"default\"\n\tif(oldScope && oldScope !== shareScope) throw new Error(\"Container initialization failed as it has already been initialized with a different share scope\");\n\t__webpack_require__.S[name] = shareScope;\n\treturn __webpack_require__.I(name, initScope);\n};\n\n// This exports getters to disallow modifications\n__webpack_require__.d(exports, {\n\tget: () => (get),\n\tinit: () => (init)\n});\n\n//# sourceURL=webpack://Webpack/container_entry?");
 
 /***/ })
 
@@ -194,7 +194,7 @@ eval("var moduleMap = {\n\t\"./Button\": () => {\n\t\treturn __webpack_require__
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "http://localhost:9090/";
+/******/ 		__webpack_require__.p = "http://localhost:9091/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/css loading */
@@ -250,11 +250,11 @@ eval("var moduleMap = {\n\t\"./Button\": () => {\n\t\treturn __webpack_require__
 /******/ 		}
 /******/ 		// object to store loaded CSS chunks
 /******/ 		var installedCssChunks = {
-/******/ 			"HelloApp": 0
+/******/ 			"ByeApp": 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = (chunkId, promises) => {
-/******/ 			var cssChunks = {"src_button_js":1,"src_components_page_index_js":1};
+/******/ 			var cssChunks = {"src_components_page_index_js":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(() => {
@@ -277,7 +277,7 @@ eval("var moduleMap = {\n\t\"./Button\": () => {\n\t\treturn __webpack_require__
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"HelloApp": 0
+/******/ 			"ByeApp": 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.j = (chunkId, promises) => {
@@ -364,8 +364,8 @@ eval("var moduleMap = {\n\t\"./Button\": () => {\n\t\treturn __webpack_require__
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("webpack/container/entry/HelloApp");
-/******/ 	HelloApp = __webpack_exports__;
+/******/ 	var __webpack_exports__ = __webpack_require__("webpack/container/entry/ByeApp");
+/******/ 	ByeApp = __webpack_exports__;
 /******/ 	
 /******/ })()
 ;
