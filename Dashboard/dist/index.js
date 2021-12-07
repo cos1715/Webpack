@@ -7,15 +7,36 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/components/navigationBar/index.js":
+/*!***********************************************!*\
+  !*** ./src/components/navigationBar/index.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"NavigationBar\": () => (/* binding */ NavigationBar)\n/* harmony export */ });\n/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.scss */ \"./src/components/navigationBar/styles.scss\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n\nvar NavigationBar = /*#__PURE__*/function () {\n  function NavigationBar() {\n    _classCallCheck(this, NavigationBar);\n  }\n\n  _createClass(NavigationBar, [{\n    key: \"render\",\n    value: function render(navData) {\n      var ul = document.createElement(\"ul\");\n      var li = navData.map(function (item) {\n        return \"\\n      <li>\\n      <a href=\\\"\".concat(item.url, \"\\\">\").concat(item.title, \"</a>\\n      </li>\\n      \");\n      });\n      ul.innerHTML = li.join(\"\");\n      ul.classList.add(\"nav-bar\");\n      document.getElementById(\"root\").appendChild(ul);\n    }\n  }]);\n\n  return NavigationBar;\n}();\n\n//# sourceURL=webpack://Dashboard/./src/components/navigationBar/index.js?");
+
+/***/ }),
 
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("var url = window.location.pathname;\nconsole.log(\"url\", url); // if (url === \"/hello\") {\n//   import(\"HelloApp/HelloPage\").then((HelloPageModule) => {\n//     const HelloPage = HelloPageModule.HelloPage;\n//     const helloPage = new HelloPage();\n//     helloPage.render();\n//   });\n// } else {\n//   // if (url === \"/bye\") {\n//   import(\"ByeApp/ByePage\").then((ByePageModule) => {\n//     // const ByePage = ByePageModule.ByePage;\n//     // const byePage = new ByePage();\n//     console.log(\"ByePage\", ByePageModule);\n//     // byePage.render();\n//   });\n//   // }\n// }\n\nif (url === \"/hello\") {\n  __webpack_require__.e(/*! import() */ \"webpack_container_remote_ByeApp_ByePage\").then(__webpack_require__.t.bind(__webpack_require__, /*! ByeApp/ByePage */ \"webpack/container/remote/ByeApp/ByePage\", 23)).then(function (ByePageModule) {\n    var ByePage = ByePageModule.ByePage;\n    var byePage = new ByePage();\n    byePage.render();\n  });\n} else {\n  __webpack_require__.e(/*! import() */ \"webpack_container_remote_HelloApp_HelloPage\").then(__webpack_require__.t.bind(__webpack_require__, /*! HelloApp/HelloPage */ \"webpack/container/remote/HelloApp/HelloPage\", 23)).then(function (HelloPageModule) {\n    var HelloPage = HelloPageModule.HelloPage;\n    var helloPage = new HelloPage();\n    helloPage.render();\n  });\n}\n\n//# sourceURL=webpack://Dashboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_navigationBar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/navigationBar */ \"./src/components/navigationBar/index.js\");\n\nvar url = window.location.pathname;\nvar navData = [{\n  url: \"/hello\",\n  title: \"Hello\"\n}, {\n  url: \"/bye\",\n  title: \"Bye\"\n}];\nvar navigationBar = new _components_navigationBar__WEBPACK_IMPORTED_MODULE_0__.NavigationBar();\nnavigationBar.render(navData);\n\nif (url === \"/hello\") {\n  __webpack_require__.e(/*! import() */ \"webpack_container_remote_ByeApp_ByePage\").then(__webpack_require__.t.bind(__webpack_require__, /*! ByeApp/ByePage */ \"webpack/container/remote/ByeApp/ByePage\", 23)).then(function (ByePageModule) {\n    var ByePage = ByePageModule.ByePage;\n    var byePage = new ByePage();\n    byePage.render();\n  });\n} else {\n  __webpack_require__.e(/*! import() */ \"webpack_container_remote_HelloApp_HelloPage\").then(__webpack_require__.t.bind(__webpack_require__, /*! HelloApp/HelloPage */ \"webpack/container/remote/HelloApp/HelloPage\", 23)).then(function (HelloPageModule) {\n    var HelloPage = HelloPageModule.HelloPage;\n    var helloPage = new HelloPage();\n    helloPage.render();\n  });\n}\n\n//# sourceURL=webpack://Dashboard/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/components/navigationBar/styles.scss":
+/*!**************************************************!*\
+  !*** ./src/components/navigationBar/styles.scss ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://Dashboard/./src/components/navigationBar/styles.scss?");
 
 /***/ }),
 
@@ -25,7 +46,6 @@ eval("var url = window.location.pathname;\nconsole.log(\"url\", url); // if (url
   \**************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 var __webpack_error__ = new Error();
 module.exports = new Promise((resolve, reject) => {
 	if(typeof ByeApp !== "undefined") return resolve();
@@ -49,7 +69,6 @@ module.exports = new Promise((resolve, reject) => {
   \****************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 var __webpack_error__ = new Error();
 module.exports = new Promise((resolve, reject) => {
 	if(typeof HelloApp !== "undefined") return resolve();

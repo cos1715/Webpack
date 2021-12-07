@@ -1,24 +1,20 @@
+import { NavigationBar } from "./components/navigationBar";
+
 const url = window.location.pathname;
-console.log("url", url);
 
-// if (url === "/hello") {
-//   import("HelloApp/HelloPage").then((HelloPageModule) => {
-//     const HelloPage = HelloPageModule.HelloPage;
-//     const helloPage = new HelloPage();
+const navData = [
+  {
+    url: "/hello",
+    title: "Hello",
+  },
+  {
+    url: "/bye",
+    title: "Bye",
+  },
+];
 
-//     helloPage.render();
-//   });
-// } else {
-//   // if (url === "/bye") {
-//   import("ByeApp/ByePage").then((ByePageModule) => {
-//     // const ByePage = ByePageModule.ByePage;
-//     // const byePage = new ByePage();
-//     console.log("ByePage", ByePageModule);
-
-//     // byePage.render();
-//   });
-//   // }
-// }
+const navigationBar = new NavigationBar();
+navigationBar.render(navData);
 
 if (url === "/hello") {
   import("ByeApp/ByePage").then((ByePageModule) => {
