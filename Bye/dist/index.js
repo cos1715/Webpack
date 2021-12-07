@@ -87,7 +87,7 @@ eval("module.exports = __webpack_require__.p + \"15acb824bff477d61d20.png\";\n\n
 
 /***/ "webpack/container/reference/HelloApp":
 /*!****************************************************************!*\
-  !*** external "HelloApp@http://localhost:9000/remoteEntry.js" ***!
+  !*** external "HelloApp@http://localhost:9090/remoteEntry.js" ***!
   \****************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -95,7 +95,7 @@ eval("module.exports = __webpack_require__.p + \"15acb824bff477d61d20.png\";\n\n
 var __webpack_error__ = new Error();
 module.exports = new Promise((resolve, reject) => {
 	if(typeof HelloApp !== "undefined") return resolve();
-	__webpack_require__.l("http://localhost:9000/remoteEntry.js", (event) => {
+	__webpack_require__.l("http://localhost:9090/remoteEntry.js", (event) => {
 		if(typeof HelloApp !== "undefined") return resolve();
 		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 		var realSrc = event && event.target && event.target.src;

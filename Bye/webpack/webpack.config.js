@@ -42,7 +42,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "ByeApp",
       remotes: {
-        HelloApp: "HelloApp@http://localhost:9000/remoteEntry.js",
+        HelloApp: "HelloApp@http://localhost:9090/remoteEntry.js",
       },
     }),
     new HtmlWebpackPlugin({

@@ -9,7 +9,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "../dist"),
-    publicPath: "http://localhost:9000/",
+    publicPath: "http://localhost:9090/",
     clean: true,
   },
   module: {
