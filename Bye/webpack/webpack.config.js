@@ -9,7 +9,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "../dist"),
-    publicPath: "",
+    publicPath: "http://localhost:9091/",
     clean: true,
   },
   module: {
@@ -41,8 +41,9 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: "ByeApp",
-      remotes: {
-        HelloApp: "HelloApp@http://localhost:9090/remoteEntry.js",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./ByePage": "./src/components/page/index.js",
       },
     }),
     new HtmlWebpackPlugin({

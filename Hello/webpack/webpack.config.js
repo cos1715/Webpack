@@ -44,7 +44,8 @@ module.exports = {
       name: "HelloApp",
       filename: "remoteEntry.js",
       exposes:{
-        './Button':'./src/button.js'
+        './Button':'./src/button.js',
+        './HelloPage':'./src/components/page/index.js'
       }
     }),
     new HtmlWebpackPlugin({
